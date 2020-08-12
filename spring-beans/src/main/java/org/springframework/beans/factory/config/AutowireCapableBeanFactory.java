@@ -31,15 +31,25 @@ import org.springframework.lang.Nullable;
  * autowiring, provided that they want to expose this functionality for
  * existing bean instances.
  *
+ * 翻译：{@link org.springframework.beans.factory.BeanFactory}接口的扩展将由能够
+ * 自动装配的bean工厂实现，前提是它们希望为现有的bean实例公开此功能。
+ *
  * <p>This subinterface of BeanFactory is not meant to be used in normal
  * application code: stick to {@link org.springframework.beans.factory.BeanFactory}
  * or {@link org.springframework.beans.factory.ListableBeanFactory} for
  * typical use cases.
  *
+ * 翻译：<p>此BeanFactory的子接口不能在常规应用程序代码中使用：
+ * 坚持使用{@link org.springframework.beans.factory.BeanFactory}
+ * 或{@link org.springframework.beans.factory.ListableBeanFactory}作为典型用例
+ *
  * <p>Integration code for other frameworks can leverage this interface to
  * wire and populate existing bean instances that Spring does not control
  * the lifecycle of. This is particularly useful for WebWork Actions and
  * Tapestry Page objects, for example.
+ *
+ * 翻译：<p>其他框架的集成代码可以利用此接口来连接和填充Spring无法控制其生命周期的现有bean实例。
+ * 例如，这对于WebWork操作和Tapestry页面对象特别有用。
  *
  * <p>Note that this interface is not implemented by
  * {@link org.springframework.context.ApplicationContext} facades,
@@ -48,10 +58,19 @@ import org.springframework.lang.Nullable;
  * {@link org.springframework.context.ApplicationContext#getAutowireCapableBeanFactory()}
  * method.
  *
+ * 翻译：<p>请注意，{@link org.springframework.context.ApplicationContext}外观未实现此接口，
+ * 因为应用程序代码几乎从未使用过此接口。也就是说，它也可以从应用程序上下文中获得，可以通过ApplicationContext
+ * 的{@link org.springframework.context.ApplicationContext＃getAutowireCapableBeanFactory（）}
+ * 方法进行访问。
+ *
  * <p>You may also implement the {@link org.springframework.beans.factory.BeanFactoryAware}
  * interface, which exposes the internal BeanFactory even when running in an
  * ApplicationContext, to get access to an AutowireCapableBeanFactory:
  * simply cast the passed-in BeanFactory to AutowireCapableBeanFactory.
+ *
+ * 翻译：<p>您还可以实现{@link org.springframework.beans.factory.BeanFactoryAware}接口，
+ * 该接口即使在ApplicationContext中运行时也公开内部BeanFactory，以访问AutowireCapableBeanFactory：
+ * 只需将传入的BeanFactory强制转换为AutowireCapableBeanFactory。
  *
  * @author Juergen Hoeller
  * @since 04.12.2003

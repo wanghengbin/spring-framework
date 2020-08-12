@@ -36,11 +36,19 @@ import org.springframework.util.StringValueResolver;
  * client methods in the {@link org.springframework.beans.factory.BeanFactory}
  * interface.
  *
+ * 翻译：大多数bean工厂都将实现的配置接口。除了{@link org.springframework.beans.factory.BeanFactory}
+ * 接口中的bean工厂客户端方法之外，还提供了用于配置bean工厂的工具。
+ *
  * <p>This bean factory interface is not meant to be used in normal application
  * code: Stick to {@link org.springframework.beans.factory.BeanFactory} or
  * {@link org.springframework.beans.factory.ListableBeanFactory} for typical
  * needs. This extended interface is just meant to allow for framework-internal
  * plug'n'play and for special access to bean factory configuration methods.
+ *
+ * 翻译：<p>此bean工厂接口不适合在常规应用程序代码中使用：
+ * 坚持使用{@link org.springframework.beans.factory.BeanFactory}或
+ * {@link org.springframework.beans.factory.ListableBeanFactory}即可满足典型需求。
+ * 此扩展接口仅用于允许在框架内部进行即插即用，并允许对bean工厂配置方法的特殊访问。
  *
  * @author Juergen Hoeller
  * @since 03.11.2003

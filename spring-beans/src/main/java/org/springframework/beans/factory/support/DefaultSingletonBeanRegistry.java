@@ -43,11 +43,19 @@ import org.springframework.util.StringUtils;
  * Allows for registering singleton instances that should be shared
  * for all callers of the registry, to be obtained via bean name.
  *
+ * 翻译：共享bean实例的通用注册表，实现了
+ * {@link org.springframework.beans.factory.config.SingletonBeanRegistry}。
+ * 允许注册应该通过Bean名称获得的所有调用者共享的单例实例。
+ *
  * <p>Also supports registration of
  * {@link org.springframework.beans.factory.DisposableBean} instances,
  * (which might or might not correspond to registered singletons),
  * to be destroyed on shutdown of the registry. Dependencies between
  * beans can be registered to enforce an appropriate shutdown order.
+ *
+ * 翻译：<p>还支持注册{@link org.springframework.beans.factory.DisposableBean}实例
+ * （可能与已注册的单例相对应）的注册，该实例在注册表关闭时会被销毁。
+ * 可以注册Bean之间的依赖关系以强制执行适当的关闭顺序。
  *
  * <p>This class mainly serves as base class for
  * {@link org.springframework.beans.factory.BeanFactory} implementations,
@@ -55,11 +63,19 @@ import org.springframework.util.StringUtils;
  * the {@link org.springframework.beans.factory.config.ConfigurableBeanFactory}
  * interface extends the {@link SingletonBeanRegistry} interface.
  *
+ * 翻译：<p>此类主要用作{@link org.springframework.beans.factory.BeanFactory}实现的基类，
+ * 从而排除了单例bean实例的常见管理。请注意，
+ * {@link org.springframework.beans.factory.config.ConfigurableBeanFactory}接口扩展了
+ * {@link SingletonBeanRegistry}接口。
+ *
  * <p>Note that this class assumes neither a bean definition concept
  * nor a specific creation process for bean instances, in contrast to
  * {@link AbstractBeanFactory} and {@link DefaultListableBeanFactory}
  * (which inherit from it). Can alternatively also be used as a nested
  * helper to delegate to.
+ *
+ * 翻译：<p>请注意，与{@link AbstractBeanFactory}和{@link DefaultListableBeanFactory}
+ * （从其继承）相比，该类既不假定bean定义概念也不为bean实例指定创建过程。也可以用作委托的嵌套帮助器。
  *
  * @author Juergen Hoeller
  * @since 2.0

@@ -86,6 +86,11 @@ import org.springframework.util.StringValueResolver;
  * as base class for bean factory implementations which obtain bean definitions
  * from some backend resource (where bean definition access is an expensive operation).
  *
+ * 翻译：{@link org.springframework.beans.factory.BeanFactory}实现的抽象基类，
+ * 提供{@link org.springframework.beans.factory.config.ConfigurableBeanFactory} SPI的全部功能。
+ * <i>不是</i>是否假定一个可列出的bean工厂：因此也可以用作bean工厂实现的基类，
+ * 该实现从某些后端资源（bean定义访问是一项昂贵的操作）中获取bean定义。
+ *
  * <p>This class provides a singleton cache (through its base class
  * {@link org.springframework.beans.factory.support.DefaultSingletonBeanRegistry},
  * singleton/prototype determination, {@link org.springframework.beans.factory.FactoryBean}
@@ -95,11 +100,21 @@ import org.springframework.util.StringValueResolver;
  * hierarchy (delegating to the parent in case of an unknown bean), through implementing
  * the {@link org.springframework.beans.factory.HierarchicalBeanFactory} interface.
  *
+ * 翻译：<p>此类提供单例缓存（通过其基类{@link org.springframework.beans.factory.support.DefaultSingletonBeanRegistry}，
+ * 单例/原型确定，{@link org.springframework.beans.factory.FactoryBean}处理，别名，
+ * 用于子bean定义的bean定义合并和bean销毁（{@link org.springframework.beans.factory.DisposableBean}接口，自定义销毁方法）
+ * 此外，它还可以管理bean工厂层次结构（以防万一，委托给父级）通过实现
+ * {@link org.springframework.beans.factory.HierarchicalBeanFactory}接口实现。
+ *
  * <p>The main template methods to be implemented by subclasses are
  * {@link #getBeanDefinition} and {@link #createBean}, retrieving a bean definition
  * for a given bean name and creating a bean instance for a given bean definition,
  * respectively. Default implementations of those operations can be found in
  * {@link DefaultListableBeanFactory} and {@link AbstractAutowireCapableBeanFactory}.
+ *
+ * 翻译：<p>要由子类实现的主要模板方法是{@link #getBeanDefinition}和{@link #createBean}，
+ * 分别为给定的bean名称检索bean定义并为给定的bean定义创建bean实例。这些操作的默认实现可以在{@link DefaultListableBeanFactory}
+ * 和{@link AbstractAutowireCapableBeanFactory}中找到。
  *
  * @author Rod Johnson
  * @author Juergen Hoeller
