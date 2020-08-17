@@ -31,6 +31,9 @@ import org.springframework.lang.Nullable;
  * rather than reading bean definitions from external configuration sources.
  * Mainly useful for testing.
  *
+ * 翻译：{@link org.springframework.context.ApplicationContext}实现，
+ * 它支持以编程方式注册Bean和消息，而不是从外部配置源读取Bean定义。主要用于测试。
+ *
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @see #registerSingleton

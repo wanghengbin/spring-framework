@@ -32,11 +32,20 @@ import org.springframework.lang.Nullable;
  * Typically (but not necessarily), such a context will be driven by
  * a set of config locations to load bean definitions from.
  *
+ * 翻译：{@link org.springframework.context.ApplicationContext}实现的基类，
+ * 应该支持对{@link #refresh（）}的多次调用，每次都创建一个新的内部bean工厂实例。
+ * 通常（但不是必须），这样的上下文将由一组配置位置来驱动，以从中加载bean定义。
+ *
  * <p>The only method to be implemented by subclasses is {@link #loadBeanDefinitions},
  * which gets invoked on each refresh. A concrete implementation is supposed to load
  * bean definitions into the given
  * {@link org.springframework.beans.factory.support.DefaultListableBeanFactory},
  * typically delegating to one or more specific bean definition readers.
+ *
+ * 翻译：<p>子类唯一实现的方法是{@link #loadBeanDefinitions}，每次刷新时都会调用该方法。
+ * 一个具体的实现应该将bean定义加载到给定的
+ * {@link org.springframework.beans.factory.support.DefaultListableBeanFactory}中，
+ * 通常委托给一个或多个特定的bean定义阅读器。
  *
  * <p><b>Note that there is a similar base class for WebApplicationContexts.</b>
  * {@link org.springframework.web.context.support.AbstractRefreshableWebApplicationContext}
@@ -44,12 +53,23 @@ import org.springframework.lang.Nullable;
  * all context functionality for web environments. There is also a
  * pre-defined way to receive config locations for a web context.
  *
+ * 翻译：<p> <b>请注意，WebApplicationContexts也有类似的基类。
+ * </b> {@link org.springframework.web.context.support.AbstractRefreshableWebApplicationContext}
+ * 提供了相同的子类化策略，但还预先实现了所有上下文功能。适用于网络环境。
+ * 还有一种预定义的方式来接收Web上下文的配置位置。
+ *
  * <p>Concrete standalone subclasses of this base class, reading in a
  * specific bean definition format, are {@link ClassPathXmlApplicationContext}
  * and {@link FileSystemXmlApplicationContext}, which both derive from the
  * common {@link AbstractXmlApplicationContext} base class;
  * {@link org.springframework.context.annotation.AnnotationConfigApplicationContext}
  * supports {@code @Configuration}-annotated classes as a source of bean definitions.
+ *
+ * 翻译：<p>以特定的bean定义格式读取的该基类的具体独立子类是{@link ClassPathXmlApplicationContext}
+ * 和{@link FileSystemXmlApplicationContext}，它们都是从通用的
+ * {@link AbstractXmlApplicationContext}基类派生的；
+ * {@link org.springframework.context.annotation.AnnotationConfigApplicationContext}
+ * 支持使用{@code @Configuration}注释的类作为Bean定义的源。
  *
  * @author Juergen Hoeller
  * @author Chris Beams

@@ -31,6 +31,10 @@ import org.springframework.util.Assert;
  * {@link javax.resource.spi.BootstrapContext}, passing it on to
  * Spring-managed beans that implement {@link BootstrapContextAware}.
  *
+ * 翻译：JCA ResourceAdapter的{@link org.springframework.context.ApplicationContext}实现。
+ * 需要使用JCA {@link javax.resource.spi.BootstrapContext}进行初始化，
+ * 并将其传递给实现{@link BootstrapContextAware}的Spring管理的Bean。
+ *
  * @author Juergen Hoeller
  * @since 2.5
  * @see SpringContextResourceAdapter

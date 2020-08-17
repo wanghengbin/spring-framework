@@ -40,22 +40,41 @@ import org.springframework.web.context.ContextLoader;
  * classes, but also plain {@link org.springframework.stereotype.Component @Component}
  * classes and JSR-330 compliant classes using {@code javax.inject} annotations.
  *
+ * 翻译：{@link org.springframework.web.context.WebApplicationContext WebApplicationContext}实现，
+ * 它接受<em>组件类</em>作为输入-特别是{@link org.springframework.context.annotation.Configuration @Configuration}
+ * 注释的类，但也可以使用{@code javax.inject}注释来添加普通的
+ * {@link org.springframework.stereotype.Component @Component}类和符合JSR-330的类。
+ *
  * <p>Allows for registering classes one by one (specifying class names as config
  * location) as well as for classpath scanning (specifying base packages as config location).
+ *
+ * 翻译：<p>允许一一注册类（将类名指定为配置位置）以及类路径扫描（将基本包指定为配置位置）。
  *
  * <p>This is essentially the equivalent of
  * {@link org.springframework.context.annotation.AnnotationConfigApplicationContext
  * AnnotationConfigApplicationContext} for a web environment.
+ *
+ * 翻译：<p>对于网络环境，这基本上等同于
+ * {@link org.springframework.context.annotation.AnnotationConfigApplicationContext
+ * AnnotationConfigApplicationContext}。
  *
  * <p>To make use of this application context, the
  * {@linkplain ContextLoader#CONTEXT_CLASS_PARAM "contextClass"} context-param for
  * ContextLoader and/or "contextClass" init-param for FrameworkServlet must be set to
  * the fully-qualified name of this class.
  *
+ * 翻译：<p>要利用此应用程序上下文，必须将用于ContextLoader的
+ * {@linkplain ContextLoader＃CONTEXT_CLASS_PARAM“contextClass”}上下文参数和/或
+ * FrameworkServlet的“contextClass” init-param设置为此类的完全限定名称。
+ *
  * <p>As of Spring 3.1, this class may also be directly instantiated and injected into
  * Spring's {@code DispatcherServlet} or {@code ContextLoaderListener} when using the
  * {@link org.springframework.web.WebApplicationInitializer WebApplicationInitializer}
  * code-based alternative to {@code web.xml}. See its Javadoc for details and usage examples.
+ *
+ * 翻译：<p>从Spring 3.1开始，使用基于代码的{@link org.springframework.web.WebApplicationInitializer
+ * WebApplicationInitializer}替代品时，也可以直接实例化此类并将其注入Spring的{@code DispatcherServlet}
+ * 或{@code ContextLoaderListener}中。 {@code web.xml}。有关详细信息和用法示例，请参见其Javadoc。
  *
  * <p>Unlike {@link XmlWebApplicationContext}, no default configuration class locations
  * are assumed. Rather, it is a requirement to set the
@@ -65,6 +84,12 @@ import org.springframework.web.context.ContextLoader;
  * class names and base packages to scan for components. See {@link #loadBeanDefinitions}
  * for exact details on how these locations are processed.
  *
+ * 翻译：<p>与{@link XmlWebApplicationContext}不同，不假定默认配置类位置。而是需要为{@link ContextLoader}
+ * 设置{@linkplain ContextLoader＃CONFIG_LOCATION_PARAM“contextConfigLocation”}
+ * 上下文参数和/或为Framework Servlet设置“contextConfigLocation” init参数。
+ * 参数值可能包含完全合格的类名和用于扫描组件的基本包。有关如何处理这些位置的确切详细信息，
+ * 请参见{@link #loadBeanDefinitions}。
+ *
  * <p>As an alternative to setting the "contextConfigLocation" parameter, users may
  * implement an {@link org.springframework.context.ApplicationContextInitializer
  * ApplicationContextInitializer} and set the
@@ -73,10 +98,17 @@ import org.springframework.web.context.ContextLoader;
  * and {@link #scan(String...)} methods over the {@link #setConfigLocation(String)}
  * method, which is primarily for use by {@code ContextLoader}.
  *
+ * 翻译：<p>作为设置“ contextConfigLocation”参数的替代方法，用户可以实现
+ * {@link org.springframework.context.ApplicationContextInitializer ApplicationContextInitializer}
+ * 并设置{@linkplain ContextLoader＃CONTEXT_INITIALIZER_CLASSES_PARAM“ contextInitializerClasses”} context-param / init-param 。在这种情况下，用户应优先使用{@link #setConfigLocation（String）}方法，而不是{@link #refresh（）}和{@link #scan（String ...）}方法。 @code ContextLoader}。
+ *
  * <p>Note: In case of multiple {@code @Configuration} classes, later {@code @Bean}
  * definitions will override ones defined in earlier loaded files. This can be leveraged
  * to deliberately override certain bean definitions via an extra {@code @Configuration}
  * class.
+ *
+ * 翻译：<p>注意：如果有多个{@code @Configuration}类，则以后的{@code @Bean}定义将覆盖在较早加载的文件中
+ * 定义的定义。通过额外的{@code @Configuration}类，可以利用它来故意覆盖某些Bean定义。
  *
  * @author Chris Beams
  * @author Juergen Hoeller

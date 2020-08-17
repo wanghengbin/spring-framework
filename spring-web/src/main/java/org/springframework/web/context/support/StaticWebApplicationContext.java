@@ -37,19 +37,33 @@ import org.springframework.web.context.ServletContextAware;
  * Static {@link org.springframework.web.context.WebApplicationContext}
  * implementation for testing. Not intended for use in production applications.
  *
+ * 翻译：用于测试的静态{@link org.springframework.web.context.WebApplicationContext}实现。
+ * 不适用于生产应用。
+ *
  * <p>Implements the {@link org.springframework.web.context.ConfigurableWebApplicationContext}
  * interface to allow for direct replacement of an {@link XmlWebApplicationContext},
  * despite not actually supporting external configuration files.
+ *
+ * 翻译；<p>实现{@link org.springframework.web.context.ConfigurableWebApplicationContext}接口，
+ * 以允许直接替换{@link XmlWebApplicationContext}，尽管实际上并不支持外部配置文件。
  *
  * <p>Interprets resource paths as servlet context resources, i.e. as paths beneath
  * the web application root. Absolute paths, e.g. for files outside the web app root,
  * can be accessed via "file:" URLs, as implemented by
  * {@link org.springframework.core.io.DefaultResourceLoader}.
  *
+ * 翻译：<p>将资源路径解释为servlet上下文资源，即Web应用程序根目录下的路径。绝对路径，例如对于Web应用程序
+ * 根目录以外的文件，可以通过{@link org.springframework.core.io.DefaultResourceLoader}实现的“file:”
+ * URL进行访问。
+ *
  * <p>In addition to the special beans detected by
  * {@link org.springframework.context.support.AbstractApplicationContext},
  * this class detects a bean of type {@link org.springframework.ui.context.ThemeSource}
  * in the context, under the special bean name "themeSource".
+ *
+ * 翻译：<p>除了{@link org.springframework.context.support.AbstractApplicationContext}检测到的特殊bean之外，
+ * 此类还在上下文中的以下位置检测到类型为{@link org.springframework.ui.context.ThemeSource}的bean。
+ * 特殊的Bean名称“ themeSource”。
  *
  * @author Rod Johnson
  * @author Juergen Hoeller

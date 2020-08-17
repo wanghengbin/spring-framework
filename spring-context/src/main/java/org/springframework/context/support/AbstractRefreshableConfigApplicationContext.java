@@ -30,6 +30,11 @@ import org.springframework.util.StringUtils;
  * {@link FileSystemXmlApplicationContext}, as well as
  * {@link org.springframework.web.context.support.XmlWebApplicationContext}.
  *
+ * 翻译：{@link AbstractRefreshableApplicationContext}子类，它添加对指定配置位置的常规处理。
+ * 作为基于XML的应用程序上下文实现（例如{@link ClassPathXmlApplicationContext}和
+ * {@link FileSystemXmlApplicationContext}以及
+ * {@link org.springframework.web.context.support.XmlWebApplicationContext}）的基类。
+ *
  * @author Juergen Hoeller
  * @since 2.5.2
  * @see #setConfigLocation

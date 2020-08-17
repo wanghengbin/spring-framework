@@ -39,23 +39,39 @@ import org.springframework.web.context.ServletContextAware;
 /**
  * Subclass of {@link GenericApplicationContext}, suitable for web environments.
  *
+ * 翻译：{@link GenericApplicationContext}的子类，适用于Web环境。
+ *
  * <p>Implements {@link org.springframework.web.context.ConfigurableWebApplicationContext},
  * but is not intended for declarative setup in {@code web.xml}. Instead, it is designed
  * for programmatic setup, for example for building nested contexts or for use within
  * {@link org.springframework.web.WebApplicationInitializer WebApplicationInitializers}.
+ *
+ * 翻译：<p>实现{@link org.springframework.web.context.ConfigurableWebApplicationContext}，
+ * 但不适用于{@code web.xml}中的声明性设置。相反，它是为编程设置而设计的，例如用于构建嵌套上下文或在
+ * {@link org.springframework.web.WebApplicationInitializer WebApplicationInitializers}中使用。
  *
  * <p><b>If you intend to implement a WebApplicationContext that reads bean definitions
  * from configuration files, consider deriving from AbstractRefreshableWebApplicationContext,
  * reading the bean definitions in an implementation of the {@code loadBeanDefinitions}
  * method.</b>
  *
+ * 翻译：<p> <b>如果打算实现从配置文件读取Bean定义的WebApplicationContext，
+ * 请考虑从AbstractRefreshableWebApplicationContext派生，并在{@code loadBeanDefinitions}
+ * 方法的实现中读取Bean定义。</b>
+ *
  * <p>Interprets resource paths as servlet context resources, i.e. as paths beneath
  * the web application root. Absolute paths, e.g. for files outside the web app root,
  * can be accessed via "file:" URLs, as implemented by AbstractApplicationContext.
  *
+ * 翻译：<p>将资源路径解释为servlet上下文资源，即Web应用程序根目录下的路径。绝对路径，
+ * 例如对于Web应用程序根目录之外的文件，可以通过AbstractApplicationContext实现的“file:” URL访问。
+ *
  * <p>In addition to the special beans detected by
  * {@link org.springframework.context.support.AbstractApplicationContext},
  * this class detects a ThemeSource bean in the context, with the name "themeSource".
+ *
+ * 翻译：<p>除了{@link org.springframework.context.support.AbstractApplicationContext}检测到的特殊bean之外，
+ * 此类还在上下文中检测名称为“ themeSource”的ThemeSource bean。
  *
  * @author Juergen Hoeller
  * @author Chris Beams

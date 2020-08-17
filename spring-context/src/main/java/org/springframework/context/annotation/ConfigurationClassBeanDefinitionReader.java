@@ -391,6 +391,9 @@ class ConfigurationClassBeanDefinitionReader {
 	 * was created from a configuration class as opposed to any other configuration source.
 	 * Used in bean overriding cases where it's necessary to determine whether the bean
 	 * definition was created externally.
+	 *
+	 * 翻译：{@link RootBeanDefinition}标记子类用于表示从配置类（而不是其他任何配置源）创建了Bean定义。
+	 * 在需要确定是否在外部创建bean定义的bean覆盖情况下使用。
 	 */
 	@SuppressWarnings("serial")
 	private static class ConfigurationClassBeanDefinition extends RootBeanDefinition implements AnnotatedBeanDefinition {

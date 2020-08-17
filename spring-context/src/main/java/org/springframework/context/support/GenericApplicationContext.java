@@ -498,6 +498,9 @@ public class GenericApplicationContext extends AbstractApplicationContext implem
 	/**
 	 * {@link RootBeanDefinition} marker subclass for {@code #registerBean} based
 	 * registrations with flexible autowiring for public constructors.
+	 *
+	 * 翻译：基于{@code #registerBean}的注册的{@link RootBeanDefinition}标记子类，
+	 * 并为公共构造函数提供了灵活的自动装配。
 	 */
 	@SuppressWarnings("serial")
 	private static class ClassDerivedBeanDefinition extends RootBeanDefinition {

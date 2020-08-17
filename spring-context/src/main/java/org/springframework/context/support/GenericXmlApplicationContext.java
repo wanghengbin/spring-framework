@@ -27,10 +27,17 @@ import org.springframework.core.io.Resource;
  * and {@link FileSystemXmlApplicationContext}, to be configured via setters,
  * with an eventual {@link #refresh()} call activating the context.
  *
+ * 翻译：带有内置XML支持的便捷应用程序上下文。这是{@link ClassPathXmlApplicationContext}
+ * 和{@link FileSystemXmlApplicationContext}的灵活替代方法，可以通过设置器进行配置，
+ * 并最终通过{@link #refresh（）}调用来激活上下文。
+ *
  * <p>In case of multiple configuration files, bean definitions in later files
  * will override those defined in earlier files. This can be leveraged to
  * intentionally override certain bean definitions via an extra configuration
  * file appended to the list.
+ *
+ * 翻译：<p>如果有多个配置文件，则更高版本文件中的Bean定义将覆盖先前文件中定义的Bean。
+ * 可以利用此属性通过附加到列表的额外配置文件来有意覆盖某些Bean定义。
  *
  * @author Juergen Hoeller
  * @author Chris Beams

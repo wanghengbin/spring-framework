@@ -31,9 +31,17 @@ import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
  * {@link org.springframework.context.support.GenericXmlApplicationContext}
  * for a web environment.
  *
+ * 翻译：{@link org.springframework.web.context.WebApplicationContext}实现，其配置来自于可以被
+ * {@link org.springframework.beans.factory.xml.XmlBeanDefinitionReader}解析的XML文档。
+ * 对于Web环境，这基本上等同于{@link org.springframework.context.support.GenericXmlApplicationContext}。
+ *
  * <p>By default, the configuration will be taken from "/WEB-INF/applicationContext.xml"
  * for the root context, and "/WEB-INF/test-servlet.xml" for a context with the namespace
  * "test-servlet" (like for a DispatcherServlet instance with the servlet-name "test").
+ *
+ * 翻译：<p>默认情况下，配置将从“/WEB-INF/applicationContext.xml”获取根上下文，
+ * 从“ /WEB-INF/test-servlet.xml”获取具有名称空间“ test-servlet”的上下文”（
+ * 例如Servlet名称为“ test”的DispatcherServlet实例）。
  *
  * <p>The config location defaults can be overridden via the "contextConfigLocation"
  * context-param of {@link org.springframework.web.context.ContextLoader} and servlet
@@ -42,14 +50,28 @@ import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
  * like "/WEB-INF/*-context.xml" (see {@link org.springframework.util.PathMatcher}
  * javadoc for pattern details).
  *
+ * 翻译：<p>可以通过{@link org.springframework.web.context.ContextLoader}的“contextConfigLocation”
+ * 上下文参数和{@link org.springframework.web.servlet.FrameworkServlet}这个servlet的init-param
+ * 覆盖配置位置的默认值。配置位置可以表示“ /WEB-INF/context.xml”之类的具体文件，也可以表示
+ * “/WEB-INF/-context.xml”之类的Ant样式的模式（有关详细信息，请参见
+ * {@link org.springframework.util.PathMatcher} javadoc模式细节）。
+ *
  * <p>Note: In case of multiple config locations, later bean definitions will
  * override ones defined in earlier loaded files. This can be leveraged to
  * deliberately override certain bean definitions via an extra XML file.
+ *
+ * 翻译：<p>注意：如果有多个配置位置，则较新的Bean定义将覆盖较早加载的文件中定义的定义。
+ * 可以利用它来通过一个额外的XML文件有意覆盖某些bean定义。
  *
  * <p><b>For a WebApplicationContext that reads in a different bean definition format,
  * create an analogous subclass of {@link AbstractRefreshableWebApplicationContext}.</b>
  * Such a context implementation can be specified as "contextClass" context-param
  * for ContextLoader or "contextClass" init-param for FrameworkServlet.
+ *
+ * 翻译：<p> <b>对于以不同bean定义格式读取的WebApplicationContext，请创建
+ * {@link AbstractRefreshableWebApplicationContext}的类似子类。</b>
+ * 可以将此类上下文实现指定为ContextLoader的“contextClass”上下文参数
+ * 或FrameworkServlet的“contextClass”初始化参数。
  *
  * @author Rod Johnson
  * @author Juergen Hoeller
